@@ -14,12 +14,15 @@ function nowServing(serving) {
 }
 
 function currentLine(line) {
-    var i = 0; 
-    if (line.length === 0) {
+    var i = 0;
+    var newLine = [];
+    if (line.length < 1) {
         return "The line is currently empty."
     } else {
         for (i; i < line.length; i++) {
-            return "The line is currently: " + i + ". " + line[i];
+            newLine.push(" " + i + ". " + line[i]);
         }
+       return 'The line is currently: ' + newLine + " ";
     }
+    
 }
